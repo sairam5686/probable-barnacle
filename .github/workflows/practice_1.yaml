@@ -3,7 +3,7 @@ name: Only-js
 on: 
   push:
     paths:
-      - "**.js"
+      - '**.js'
 
 jobs:
   only_Build:

@@ -1,12 +1,13 @@
-name : practice_1
+name: Only-js
 
-on: push
-
+on: 
+  push:
+    paths:
+      - **.js
 
 jobs:
-  build:
+  only_Build:
     runs-on: ubuntu-latest
-    
-    steps: 
-      - name: Nothing to run 
-        run : echo "Hello world"
+    steps:
+      - name: js has been detected
+        run: echo "js pushed" 

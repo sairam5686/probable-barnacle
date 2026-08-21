@@ -1,0 +1,20 @@
+name: python runer
+
+on: 
+  push:
+    paths : ['**.py']
+
+jobs:
+  python_runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code cloning
+        uses: actions/checkout@v6
+      - name: Python intepreter installer
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13' 
+
+      - name: Running script
+        run: python main.py
+
